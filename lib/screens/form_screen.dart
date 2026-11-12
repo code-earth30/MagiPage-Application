@@ -1,3 +1,4 @@
+// lib/screens/form_screen.dart
 import 'package:flutter/material.dart';
 
 class FormScreen extends StatefulWidget {
@@ -8,19 +9,16 @@ class FormScreen extends StatefulWidget {
 }
 
 class _FormScreenState extends State<FormScreen> {
-  // TextEditingController required by Section C
   final TextEditingController _bookController = TextEditingController();
 
   @override
   void dispose() {
-    // Proper disposal required by Section C to prevent memory leaks
     _bookController.dispose();
     super.dispose();
   }
 
   void _submitBook() {
     if (_bookController.text.trim().isEmpty) {
-      // Empty input check showing a SnackBar (Section C requirement)
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
           content: Text('Please enter a book title first!'),

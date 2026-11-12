@@ -1,3 +1,4 @@
+// lib/screens/home_screen.dart
 import 'package:flutter/material.dart';
 import 'form_screen.dart';
 import 'detail_screen.dart';
@@ -10,7 +11,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  // State variables for Section D
   bool _isAccessibilityMode = false;
   String _statusMessage = "Standard Grip Mode Active";
 
@@ -18,7 +18,6 @@ class _HomeScreenState extends State<HomeScreen> {
     setState(() {
       _isAccessibilityMode = !_isAccessibilityMode;
       
-      // Real decision using if/else (Section D requirement)
       if (_isAccessibilityMode) {
         _statusMessage = "Enhanced One-Handed & Accessibility Grip Enabled!";
       } else {
@@ -52,7 +51,6 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             const SizedBox(height: 30),
             
-            // State display box
             Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
@@ -74,7 +72,6 @@ class _HomeScreenState extends State<HomeScreen> {
             
             const Spacer(),
 
-            // Navigation to Form Screen (Section C)
             ElevatedButton.icon(
               style: ElevatedButton.styleFrom(backgroundColor: Colors.indigo, foregroundColor: Colors.white),
               icon: const Icon(Icons.edit),
@@ -88,7 +85,6 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             const SizedBox(height: 12),
 
-            // Navigation to List/Detail Screen (Section E)
             OutlinedButton.icon(
               style: OutlinedButton.styleFrom(foregroundColor: Colors.indigo),
               icon: const Icon(Icons.list),

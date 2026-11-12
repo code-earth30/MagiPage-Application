@@ -1,9 +1,9 @@
+// lib/screens/detail_screen.dart
 import 'package:flutter/material.dart';
 
 class DetailScreen extends StatelessWidget {
   const DetailScreen({super.key});
 
-  // Sample data list
   final List<String> genres = const [
     'Classic Paperbacks',
     'Pocket Thrillers',
@@ -19,7 +19,6 @@ class DetailScreen extends StatelessWidget {
         title: const Text('Paperback Genres'),
         backgroundColor: Colors.indigo,
       ),
-      // ListView.builder requirement (Section E)
       body: ListView.builder(
         itemCount: genres.length,
         itemBuilder: (context, index) {
@@ -31,7 +30,6 @@ class DetailScreen extends StatelessWidget {
               subtitle: const Text('Optimized for magnetic holding strength'),
               trailing: const Icon(Icons.arrow_forward_ios, size: 16),
               onTap: () {
-                // Open detail screen and pass data via constructor (Section E & D)
                 Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -47,7 +45,6 @@ class DetailScreen extends StatelessWidget {
   }
 }
 
-// Sub-detail screen receiving data through constructor
 class GenreDetailView extends StatelessWidget {
   final String genreName;
 

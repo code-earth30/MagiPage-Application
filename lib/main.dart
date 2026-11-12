@@ -1,5 +1,6 @@
+// lib/main.dart
 import 'package:flutter/material.dart';
-import 'screens/home_screen.dart'; // Connects to home screen file
+import 'screens/home_screen.dart';
 
 void main() {
   runApp(const MagiPageApp());
@@ -13,11 +14,11 @@ class MagiPageApp extends StatelessWidget {
     return MaterialApp(
       title: 'MagiPage',
       theme: ThemeData(
-        primarySwatch: Colors.orange,
-        scaffoldBackgroundColor: const Color(0xFFF9F9F9),
+        primarySwatch: Colors.indigo,
+        scaffoldBackgroundColor: Colors.grey[50],
         fontFamily: 'Roboto',
       ),
-      home: const HomeScreen(), // Loads our screen YAYAYAYAY
+      home: const HomeScreen(),
     );
   }
 }
