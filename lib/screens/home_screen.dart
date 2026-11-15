@@ -1,7 +1,7 @@
 // lib/screens/home_screen.dart
 import 'package:flutter/material.dart';
-import 'form_screen.dart';
 import 'detail_screen.dart';
+import 'tracking_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -72,19 +72,6 @@ class _HomeScreenState extends State<HomeScreen> {
             
             const Spacer(),
 
-            ElevatedButton.icon(
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.indigo, foregroundColor: Colors.white),
-              icon: const Icon(Icons.edit),
-              label: const Text('Check Book Compatibility Form'),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const FormScreen()),
-                );
-              },
-            ),
-            const SizedBox(height: 12),
-
             OutlinedButton.icon(
               style: OutlinedButton.styleFrom(foregroundColor: Colors.indigo),
               icon: const Icon(Icons.list),
@@ -93,6 +80,19 @@ class _HomeScreenState extends State<HomeScreen> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const DetailScreen()),
+                );
+              },
+            ),
+            const SizedBox(height: 12),
+
+            ElevatedButton.icon(
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.orange, foregroundColor: Colors.white),
+              icon: const Icon(Icons.menu_book),
+              label: const Text('Open Reading Queue'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const TrackingScreen()),
                 );
               },
             ),
